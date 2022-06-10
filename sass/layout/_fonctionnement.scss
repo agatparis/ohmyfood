@@ -1,0 +1,62 @@
+.fonctionnement {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: white;
+    padding:1.5rem;
+    &__title {
+        @include sectionTitle;
+    }
+    &__section {
+        padding: 2rem 0;
+        @include ecranDesktop {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+        &__item {
+            padding: .5rem;
+            @include ecranTablet {
+                width:60%;
+                margin:auto;
+            }
+            @include ecranDesktop {
+                padding: .5rem 2rem;
+            }
+            &__btn {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                justify-content: left;
+                align-items: center;
+                background-color: $mediumGreyColor;
+                transform: background-color;
+                transition: 400ms 30ms ease-in-out;
+                padding:1.5rem 2rem;
+                border-radius: 1.6rem;
+                @include btnShadow;
+                @include ecranDesktop {
+                    width:90%;
+                }
+                &:hover, &:active {
+                    background-color: $primaryColorTransparent;
+                    svg {
+                        fill:$primaryColor;
+                    }
+                }
+                &__nbr {
+                    @include indentNumber;
+                }
+                a {
+                    font-weight: $bold;
+                    }
+                svg {
+                    @include iconsAppearance;
+                    padding-left: 2rem;
+                    fill:gray;
+                }
+            }
+        }
+    
+    }
+}

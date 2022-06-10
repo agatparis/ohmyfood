@@ -1,0 +1,80 @@
+$bkptDesktop: 1024px;
+$bkptTablet: 768px;
+$bkptSmartphone: 640px;
+
+@mixin ecranSmartphone {
+    @media only screen and (max-width:$bkptSmartphone) {
+        @content;
+    }
+}
+
+@mixin ecranTablet {
+    @media only screen and (min-width:$bkptSmartphone) and (max-width:$bkptDesktop) {
+        @content;
+    }
+}
+
+@mixin ecranDesktop {
+    @media only screen and (min-width:$bkptDesktop) {
+        @content;
+    }
+}
+
+@mixin btnShadow {
+    box-shadow: rgba(0, 0, 0, 0.15) 1px 5px 10px 1px;
+}
+
+@mixin sectionTitle {
+    font-size: 1.6rem;
+    font-weight: 600;
+    padding:.5rem 0;
+    @include ecranTablet {
+        font-size: 1.2rem;
+    }
+    @include ecranDesktop {
+        font-size: 1.2rem;
+    }
+}
+
+@mixin sectionSubTitle {
+    font-size: 1.2rem;
+    font-weight: 300;
+    padding: 0;
+    @include ecranTablet {
+        font-size: 1rem;
+    }
+    @include ecranDesktop {
+        font-size: 1rem;
+    }
+}
+
+@mixin indentNumber {
+    background-color: $primaryColor;
+    color:white;
+    height:1.2rem;
+    width:1.2rem;
+    text-align: center;
+    border-radius: 1.6rem;
+    padding: .2rem .2rem;
+    margin-left: -2.5rem;
+    @include ecranTablet {
+        padding: .45rem;
+        margin-left: -2.8rem; 
+    }
+    @include ecranDesktop {
+        padding: .6rem;
+        margin-left: -3.1rem;
+    }
+}
+
+@mixin iconsAppearance {
+    max-height: 1.4rem;
+    padding-right: 1rem;
+        @include ecranTablet {
+            font-size: 1.6rem;
+        }
+}
+
+@mixin transitionTiming {
+    transition: 200ms 30ms ease-in-out;
+}

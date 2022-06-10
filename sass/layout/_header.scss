@@ -1,0 +1,34 @@
+
+header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 3px 3px 0px;
+    margin-bottom: 16px;
+    padding: .7rem 0;
+        .header__spacer {
+            flex-basis: 20%;
+            flex-shrink: 1;
+        } 
+        .header__logo {
+            flex-basis: 60%;
+            flex-shrink: 0;
+            text-align: center;
+            font-family: $titleLogoFontFamily;
+            a {
+                text-decoration: none;
+                color: black;     
+                @include ecranSmartphone {
+                    font-size: 5vh;
+                }
+                @include ecranTablet{
+                    font-size: 3vh;
+                }
+                @include ecranDesktop {
+                    font-size: 30px;
+                }
+            }
+        }
+}

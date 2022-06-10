@@ -1,0 +1,15 @@
+/* Polices de caractère */
+h1, h2, h3, h4, h5, h6 {
+    font-family: $textFontFamily;
+    font-weight: 500;
+}
+
+div, span, p {
+    font-family: $textFontFamily;
+    font-weight: 400; 
+}
+
+a {
+    text-decoration: none;
+    color:black;
+}

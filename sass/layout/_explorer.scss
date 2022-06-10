@@ -1,0 +1,75 @@
+.restaurantExploration {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+        &__geoloc {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-end;
+            justify-content: center;
+            background-color: $darkGreyColor;
+            text-align: center;
+            font-family: $textFontFamily;
+            font-size: 1rem;
+            font-weight:500;
+            padding: 0 0 1rem 0;
+            @include ecranTablet {
+                font-size: 1.2rem;
+            }
+            svg {
+                @include iconsAppearance;
+            }
+        }
+        &__searchEngine {
+            display: flex;
+            flex-direction: column;
+            background-color: $mediumGreyColor;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 1.5rem 0;
+            @include ecranTablet {
+                padding: 1rem 0 0 0;
+            }
+            @include ecranDesktop {                
+                padding: 1rem 0 0 0;
+            }
+            &__title1 {
+                    width: 80%;
+                    h1 {
+                        @include sectionTitle;
+                    }
+                    }
+            &__title2 {
+                    width:90%;
+                    span {
+                        @include sectionSubTitle;
+                    }
+                }
+            &__btn {
+                padding: 1.8rem 0 2rem 0;
+                @include ecranTablet {
+                    padding: 1rem 0 1.8rem 0;
+                }
+                @include ecranDesktop {
+                    padding: 1rem 0 2.2rem 0;
+                }
+                button {
+                    padding: .7rem 1.7rem;
+                    background: linear-gradient($secondaryColor, $primaryColor);
+                    border: none;
+                    border-radius: $radiusCard;
+                    color: white;
+                    font-size: 1rem;
+                    font-weight: 500;
+                    @include btnShadow;
+                    @include ecranTablet {
+                        font-size: .8rem;
+                    }
+                    @include ecranDesktop {
+                        font-size: .8rem;
+                    }
+                }
+            }
+        }        
+}
