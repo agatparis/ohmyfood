@@ -38,12 +38,6 @@
                 @include ecranDesktop {
                     width:90%;
                 }
-                &:hover, &:active {
-                    background-color: $primaryColorTransparent;
-                    svg {
-                        fill:$primaryColor;
-                    }
-                }
                 &__nbr {
                     @include indentNumber;
                 }
@@ -54,6 +48,14 @@
                     @include iconsAppearance;
                     padding-left: 2rem;
                     fill:gray;
+                    transform: fill;
+                }
+                &:hover, &:active {
+                    background-color: $primaryColorTransparent;
+                    svg {
+                        fill:$primaryColor;                        
+                        transition: all 600ms ease-in-out;
+                    }
                 }
             }
         }

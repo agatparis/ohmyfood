@@ -1,0 +1,27 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    padding:1.5rem;
+    background: #282828;
+    color: white;
+    &__title {
+        font-family: $titleLogoFontFamily;
+        font-size: 1.2rem;
+    }
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding-top:.8rem;
+        line-height: 1.7;
+        a {
+            color: white;
+            font-family: $textFontFamily;
+            font-size: .9rem;
+            span {
+                font-size: .7rem;
+                padding:0 .7rem 0 0;
+            }
+        }
+    }
+}

@@ -78,3 +78,14 @@ $bkptSmartphone: 640px;
 @mixin transitionTiming {
     transition: 200ms 30ms ease-in-out;
 }
+
+@mixin restaurantImgProperties {
+    height:10rem;
+    width:100%;
+    flex-shrink: 0;
+    background-size: cover;
+    background-position: bottom;
+    border-top-left-radius: $radiusCard;
+    border-top-right-radius: $radiusCard;
+    text-align: right;
+}

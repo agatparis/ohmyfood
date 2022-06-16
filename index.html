@@ -8,10 +8,11 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Shrikhand&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/13f326ba0c.js" crossorigin="anonymous"></script>
 </head> 
   <body>
 
-<header>
+<header> <!-- entête du logo -->
   <span class="header__spacer"></span>
   <span class="header__logo">
     <a href="#">
@@ -19,14 +20,14 @@
     </a>
   </span>
   <span class="header__spacer"></span>
-</header>
+</header> <!-- fin de l'entête du logo -->
 
-<section class="restaurantExploration">
-  <div class="restaurantExploration__geoloc">
+<section class="restaurantExploration"> <!-- section de recherche des restaurants -->
+  <div class="restaurantExploration__geoloc"> <!-- début geoloc -->
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!-- Font Awesome Pro 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) --><path d="M172.268 501.67C26.97 291.031 0 269.413 0 192 0 85.961 85.961 0 192 0s192 85.961 192 192c0 77.413-26.97 99.031-172.268 309.67-9.535 13.774-29.93 13.773-39.464 0zM192 272c44.183 0 80-35.817 80-80s-35.817-80-80-80-80 35.817-80 80 35.817 80 80 80z"/></svg>
     <span>Paris, Belleville</span>
-  </div>
-  <div class="restaurantExploration__searchEngine">
+  </div> <!-- fin geoloc -->
+  <div class="restaurantExploration__searchEngine"> <!-- début de la recherche -->
     <div class="restaurantExploration__searchEngine__title1">
       <h1>Réservez le menu qui vous convient</h1>
     </div>
@@ -36,10 +37,10 @@
     <div class="restaurantExploration__searchEngine__btn">
       <button>Explorez nos restaurants</button>
     </div>
-  </div>
-</section>
+  </div> <!-- fin de la recherche -->
+</section> <!-- fin de section de recherche des restaurants -->
 
-<section class="fonctionnement">
+<section class="fonctionnement"> <!-- début de la section d'explication du fonctionnement -->
   <div class="fonctionnement__title">Fonctionnement</div>
   <div class="fonctionnement__section">
     <article class="fonctionnement__section__item">
@@ -64,28 +65,95 @@
     </div>
   </article>
   </div>
-</section>
+</section> <!-- fin de la section d'explication du fonctionnement -->
 
-<section class="restaurants">
+<section class="restaurants">  <!-- début de la section des restaurants -->
   <div class="restaurants__title">
     Restaurants
   </div>
-    <article class="restaurants__cardContent">
-      <div class="restaurants__cardContent__img">
-        <div class="restaurants__cardContent__img__new">Nouveau</div>
-      </div>
-      <div class="restaurants__cardContent__legend">
-        <div class="restaurants__cardContent__legend__title">
-        <div class="restaurants__cardContent__legend__title__name">La palette du goût</div>
-        <div class="restaurants__cardContent__legend__title__localisation">Ménilmontant</div>
+  <div class="restaurants__list"> <!-- début de la liste des restos -->
+    <form action="POST" class="restaurants__list__form">
+      <article class="restaurants__cardContent">  <!-- début de la fiche resto sous forme de carte -->
+        <div class="restaurants__cardContent__img">
+          <div class="restaurants__cardContent__img__new">Nouveau</div>
         </div>
-        <div class="restaurants__cardContent__legend__heart">
-            <p></p>
+        <div class="restaurants__cardContent__legend">
+          <div class="restaurants__cardContent__legend__title">
+          <div class="restaurants__cardContent__legend__title__name">La palette du goût</div>
+          <div class="restaurants__cardContent__legend__title__localisation">Ménilmontant</div>
           </div>
-    </article>
-</section>
+          <span class="restaurants__cardContent__legend__favorite">
+            <input type="radio" id="resto1" class="restaurants__cardContent__legend__favorite__radiobtn"/>
+            <label for="resto1">
+              <i class="fa-regular fa-heart"></i>
+              <i class="fa-solid fa-heart"></i>
+            </label>
+          </span>
+      </article> <!-- fin de la fiche resto sous forme de carte -->
+      <article class="restaurants__cardContent">  <!-- début de la fiche resto sous forme de carte -->
+        <div class="restaurants__cardContent__img">
+          <div class="restaurants__cardContent__img__new">Nouveau</div>
+        </div>
+        <div class="restaurants__cardContent__legend">
+          <div class="restaurants__cardContent__legend__title">
+          <div class="restaurants__cardContent__legend__title__name">La note enchantée</div>
+          <div class="restaurants__cardContent__legend__title__localisation">Charonne</div>
+          </div>
+          <span class="restaurants__cardContent__legend__favorite">
+            <input type="radio" id="resto2" class="restaurants__cardContent__legend__favorite__radiobtn"/>
+            <label for="resto2">
+              <i class="fa-regular fa-heart"></i>
+              <i class="fa-solid fa-heart"></i>
+            </label>
+          </span>
+      </article> <!-- fin de la fiche resto sous forme de carte -->
+      <article class="restaurants__cardContent">  <!-- début de la fiche resto sous forme de carte -->
+        <div class="restaurants__cardContent__img">
+          <div class="restaurants__cardContent__img__new">Nouveau</div>
+        </div>
+        <div class="restaurants__cardContent__legend">
+          <div class="restaurants__cardContent__legend__title">
+          <div class="restaurants__cardContent__legend__title__name">A la française</div>
+          <div class="restaurants__cardContent__legend__title__localisation">Cité rouge</div>
+          </div>
+          <span class="restaurants__cardContent__legend__favorite">
+            <input type="radio" id="resto3" class="restaurants__cardContent__legend__favorite__radiobtn"/>
+            <label for="resto3">
+              <i class="fa-regular fa-heart"></i>
+              <i class="fa-solid fa-heart"></i>
+            </label>
+          </span>
+      </article> <!-- fin de la fiche resto sous forme de carte -->
+      <article class="restaurants__cardContent">  <!-- début de la fiche resto sous forme de carte -->
+        <div class="restaurants__cardContent__img">
+          <div class="restaurants__cardContent__img__new">Nouveau</div>
+        </div>
+        <div class="restaurants__cardContent__legend">
+          <div class="restaurants__cardContent__legend__title">
+          <div class="restaurants__cardContent__legend__title__name">Le délice des sens</div>
+          <div class="restaurants__cardContent__legend__title__localisation">Folie-Méricourt</div>
+          </div>
+          <span class="restaurants__cardContent__legend__favorite">
+            <input type="radio" id="resto4" class="restaurants__cardContent__legend__favorite__radiobtn"/>
+            <label for="resto4">
+              <i class="fa-regular fa-heart"></i>
+              <i class="fa-solid fa-heart"></i>
+            </label>
+          </span>
+      </article> <!-- fin de la fiche resto sous forme de carte -->
+    </form>
+    </div>  <!-- fin de la liste des restos -->
+</section> <!-- fin de la section des restaurants -->
 
-<footer></footer>
+<footer class="footer"> <!-- début du footer -->
+  <div class="footer__title">ohmyfood</div> <!-- titre du footer -->
+  <nav class="footer__content"> <!-- début du menu du footer -->
+      <a href="#"><span><i class="fa-solid fa-utensils"></i></span>Proposer un restaurant</a>
+      <a href="#"><span><i class="fa-solid fa-handshake-angle"></i></span>Devenir partenaire</a>
+      <a href="#">Mentions légales</a>
+      <a href="#">Contact</a>
+  </nav>  <!-- fin du menu du footer -->
+</footer> <!-- fin du footer -->
 
 </body>
 </html>

@@ -1,39 +1,59 @@
-
-$linearColor: linear-gradient(45deg, $secondaryColor, $primaryColor);
-/*
-@keyframes backgroundIconTransformation {
-    0% { fill:linear-gradient(0deg, $secondaryColor, $secondaryColor)};
-    25% { fill:linear-gradient(0deg, $secondaryColor 25%, $primaryColor)};
-    50% {fill:linear-gradient(0deg, $secondaryColor 25%, $primaryColor)};
-    75% {fill:linear-gradient(0deg, $secondaryColor 75%, $primaryColor)};
-    100% {fill:linear-gradient(0deg, $secondaryColor 100%, $primaryColor)};
-}
-*/     
+  
 .restaurants {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     background-color: $mediumGreyColor;
     padding:1.5rem;
+    &__list__form {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        @include ecranTablet {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+        @include ecranDesktop {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+    }
     &__title {
         @include sectionTitle;
     }
     &__cardContent {
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        justify-content: center;
         border-radius: $radiusCard;
+        margin:3% 1%;
         @include btnShadow;
-        &__img {
+        &:first-child &__img {
             background: url(../assets/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
-            height:10rem;
-            width:100%;
-            flex-shrink: 0;
-            background-size: cover;
-            background-position: bottom;
-            border-top-left-radius: $radiusCard;
-            border-top-right-radius: $radiusCard;
-            text-align: right;
+            @include restaurantImgProperties;
+        }
+        &:nth-child(2) &__img {
+            background: url(../assets/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg);
+            @include restaurantImgProperties;
+        }
+        &:nth-child(3) &__img {
+            background: url(../assets/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
+            @include restaurantImgProperties;
+        }
+        &:nth-child(4) &__img {
+            background: url(../assets/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
+            @include restaurantImgProperties;
+        }
+        @include ecranTablet {
+            flex-basis: 45%;
+        }
+        @include ecranDesktop {
+            flex-basis: 30%;
+        }
+        &__img {
+
             &__new {
                 position: relative;
                 text-align: center;
@@ -52,13 +72,46 @@ $linearColor: linear-gradient(45deg, $secondaryColor, $primaryColor);
             flex-direction: row;
             flex-wrap: nowrap;
             justify-content: space-between;
+            align-items: stretch;
             padding:.8rem;
             line-height: 1.5;    
             &__title__name {
                 font-weight: $bold;
             }
-
-            
+            &__favorite {
+                padding:0;
+                position: relative;
+                .fa-heart {
+                    position: absolute;
+                    font-size: 2rem;
+                }
+                .fa-regular {
+                    right: 3%;
+                    z-index: 1;
+                }
+                .fa-solid {
+                    color: transparent;
+                    z-index: 0;
+                    right: 3%;
+                    background: linear-gradient($primaryColor, $secondaryColor);
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    transform: scale(0);
+                    opacity: 0;
+                }
+                // autre moyen d'écrire en sass ?
+                &__radiobtn {
+                    display: none;
+                    &:checked ~ label .fa-regular {
+                        opacity: 0;
+                    }
+                    &:checked ~ label .fa-solid {
+                        transition: all 600ms;
+                        transform: scale(1);
+                        opacity:1;
+                    }
+                }  
+            } 
         }
     }
 }
