@@ -20,7 +20,7 @@
             flex-wrap: wrap;
         }
     }
-    &__title {
+    &__title h2 {
         @include sectionTitle;
     }
     &__cardContent {
@@ -75,8 +75,9 @@
             align-items: stretch;
             padding:.8rem;
             line-height: 1.5;    
-            &__title__name {
+            &__title__name h3 {
                 font-weight: $bold;
+                font-size: 1rem;
             }
             &__favorite {
                 padding:0;

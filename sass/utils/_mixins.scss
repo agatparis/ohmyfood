@@ -22,6 +22,12 @@ $bkptSmartphone: 640px;
 
 @mixin btnShadow {
     box-shadow: rgba(0, 0, 0, 0.15) 1px 5px 10px 1px;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.15) 1px 5px 10px 1px;
+}
+
+@mixin btnShadowPushed {
+    box-shadow: rgba(0, 0, 0, 0.15) 1px 5px 10px 1px inset;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.15) 1px 5px 10px 1px inset;
 }
 
 @mixin sectionTitle {

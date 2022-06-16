@@ -34,20 +34,20 @@ a {
   padding: 1.5rem;
 }
 
-.fonctionnement__title {
+.fonctionnement__title h2 {
   font-size: 1.6rem;
   font-weight: 600;
   padding: .5rem 0;
 }
 
 @media only screen and (min-width: 640px) and (max-width: 1024px) {
-  .fonctionnement__title {
+  .fonctionnement__title h2 {
     font-size: 1.2rem;
   }
 }
 
 @media only screen and (min-width: 1024px) {
-  .fonctionnement__title {
+  .fonctionnement__title h2 {
     font-size: 1.2rem;
   }
 }
@@ -87,12 +87,12 @@ a {
   flex-wrap: nowrap;
   justify-content: left;
   align-items: center;
-  background-color: #f6f6f6;
-  transform: background-color;
+  background: #f6f6f6;
   transition: 400ms 30ms ease-in-out;
   padding: 1.5rem 2rem;
   border-radius: 1.6rem;
   box-shadow: rgba(0, 0, 0, 0.15) 1px 5px 10px 1px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.15) 1px 5px 10px 1px;
 }
 
 @media only screen and (min-width: 1024px) {
@@ -126,8 +126,9 @@ a {
   }
 }
 
-.fonctionnement__section__item__btn a {
+.fonctionnement__section__item__btn a h3 {
   font-weight: 500;
+  font-size: 1rem;
 }
 
 .fonctionnement__section__item__btn svg {
@@ -135,7 +136,6 @@ a {
   padding-right: 1rem;
   padding-left: 2rem;
   fill: gray;
-  transform: fill;
 }
 
 @media only screen and (min-width: 640px) and (max-width: 1024px) {
@@ -145,7 +145,7 @@ a {
 }
 
 .fonctionnement__section__item__btn:hover, .fonctionnement__section__item__btn:active {
-  background-color: #9356DC1A;
+  background: #9356DC1A;
 }
 
 .fonctionnement__section__item__btn:hover svg, .fonctionnement__section__item__btn:active svg {
@@ -312,6 +312,7 @@ a {
   font-size: 1rem;
   font-weight: 500;
   box-shadow: rgba(0, 0, 0, 0.15) 1px 5px 10px 1px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.15) 1px 5px 10px 1px;
 }
 
 @media only screen and (min-width: 640px) and (max-width: 1024px) {
@@ -324,6 +325,14 @@ a {
   .restaurantExploration__searchEngine__btn button {
     font-size: .8rem;
   }
+}
+
+.restaurantExploration__searchEngine__btn button:hover {
+  box-shadow: rgba(0, 0, 0, 0.2) 1px 7px 10px 1px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.2) 1px 7px 10px 1px;
+  filter: grayscale(10%);
+  transform: scale(1.1);
+  transition: all 600ms ease-in-out;
 }
 
 header {
@@ -402,20 +411,20 @@ header .header__logo a {
   }
 }
 
-.restaurants__title {
+.restaurants__title h2 {
   font-size: 1.6rem;
   font-weight: 600;
   padding: .5rem 0;
 }
 
 @media only screen and (min-width: 640px) and (max-width: 1024px) {
-  .restaurants__title {
+  .restaurants__title h2 {
     font-size: 1.2rem;
   }
 }
 
 @media only screen and (min-width: 1024px) {
-  .restaurants__title {
+  .restaurants__title h2 {
     font-size: 1.2rem;
   }
 }
@@ -427,6 +436,7 @@ header .header__logo a {
   border-radius: 1.8rem;
   margin: 3% 1%;
   box-shadow: rgba(0, 0, 0, 0.15) 1px 5px 10px 1px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.15) 1px 5px 10px 1px;
 }
 
 .restaurants__cardContent:first-child .restaurants__cardContent__img {
@@ -512,8 +522,9 @@ header .header__logo a {
   line-height: 1.5;
 }
 
-.restaurants__cardContent__legend__title__name {
+.restaurants__cardContent__legend__title__name h3 {
   font-weight: 500;
+  font-size: 1rem;
 }
 
 .restaurants__cardContent__legend__favorite {

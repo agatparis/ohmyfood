@@ -61,13 +61,21 @@
                     border-radius: $radiusCard;
                     color: white;
                     font-size: 1rem;
-                    font-weight: 500;
-                    @include btnShadow;
+                    font-weight: 500;    
+                    box-shadow: rgba(0, 0, 0, 0.15) 1px 5px 10px 1px;
+                    -webkit-box-shadow: rgba(0, 0, 0, 0.15) 1px 5px 10px 1px;                            
                     @include ecranTablet {
                         font-size: .8rem;
                     }
                     @include ecranDesktop {
                         font-size: .8rem;
+                    }
+                    &:hover {
+                        box-shadow: rgba(0, 0, 0, 0.2) 1px 7px 10px 1px;
+                        -webkit-box-shadow: rgba(0, 0, 0, 0.2) 1px 7px 10px 1px;
+                        filter: grayscale(10%); 
+                        transform: scale(1.1);
+                        transition: all 600ms ease-in-out;            
                     }
                 }
             }

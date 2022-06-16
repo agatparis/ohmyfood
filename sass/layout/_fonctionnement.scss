@@ -4,7 +4,7 @@
     justify-content: space-between;
     background-color: white;
     padding:1.5rem;
-    &__title {
+    &__title h2 {
         @include sectionTitle;
     }
     &__section {
@@ -29,8 +29,7 @@
                 flex-wrap: nowrap;
                 justify-content: left;
                 align-items: center;
-                background-color: $mediumGreyColor;
-                transform: background-color;
+                background: $mediumGreyColor;
                 transition: 400ms 30ms ease-in-out;
                 padding:1.5rem 2rem;
                 border-radius: 1.6rem;
@@ -41,17 +40,17 @@
                 &__nbr {
                     @include indentNumber;
                 }
-                a {
+                a h3 {
                     font-weight: $bold;
+                    font-size: 1rem;
                     }
                 svg {
                     @include iconsAppearance;
                     padding-left: 2rem;
                     fill:gray;
-                    transform: fill;
                 }
                 &:hover, &:active {
-                    background-color: $primaryColorTransparent;
+                    background: $primaryColorTransparent;
                     svg {
                         fill:$primaryColor;                        
                         transition: all 600ms ease-in-out;
