@@ -1,3 +1,19 @@
+@keyframes btnTransform {
+    15% {
+        box-shadow: rgba(0, 0, 0, 0.2) 1px 7px 5px 1px;
+        -webkit-box-shadow: rgba(0, 0, 0, 0.2) 1px 7px 5px 1px;
+        filter: grayscale(5%); 
+        transform: scale(1);
+    }
+    100% {
+        box-shadow: rgba(0, 0, 0, 0.2) 1px 7px 10px 1px;
+        -webkit-box-shadow: rgba(0, 0, 0, 0.2) 1px 7px 10px 1px;
+        filter: grayscale(10%); 
+        transform: scale(1.1, 1);
+    }
+}
+
+
 .restaurantExploration {
     display: flex;
     flex-direction: column;
@@ -23,11 +39,11 @@
         &__searchEngine {
             display: flex;
             flex-direction: column;
-            background-color: $mediumGreyColor;
             justify-content: center;
             align-items: center;
             text-align: center;
             padding: 1.5rem 0;
+            transform: scale(0.9);
             @include ecranTablet {
                 padding: 1rem 0 0 0;
             }
@@ -63,7 +79,7 @@
                     font-size: 1rem;
                     font-weight: 500;    
                     box-shadow: rgba(0, 0, 0, 0.15) 1px 5px 10px 1px;
-                    -webkit-box-shadow: rgba(0, 0, 0, 0.15) 1px 5px 10px 1px;                            
+                    -webkit-box-shadow: rgba(0, 0, 0, 0.15) 1px 5px 10px 1px;                        
                     @include ecranTablet {
                         font-size: .8rem;
                     }
@@ -71,11 +87,10 @@
                         font-size: .8rem;
                     }
                     &:hover {
-                        box-shadow: rgba(0, 0, 0, 0.2) 1px 7px 10px 1px;
-                        -webkit-box-shadow: rgba(0, 0, 0, 0.2) 1px 7px 10px 1px;
-                        filter: grayscale(10%); 
-                        transform: scale(1.1);
-                        transition: all 600ms ease-in-out;            
+                        animation: btnTransform .3s ease-in;
+                        animation-fill-mode: both;    
+                        animation-iteration-count: 2;
+                        animation-direction: alternate;
                     }
                 }
             }
