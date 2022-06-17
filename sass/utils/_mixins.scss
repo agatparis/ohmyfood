@@ -30,6 +30,23 @@ $bkptSmartphone: 640px;
     -webkit-box-shadow: rgba(0, 0, 0, 0.15) 1px 5px 10px 1px inset;
 }
 
+@mixin logoMenuTitle {
+    font-family: $titleLogoFontFamily;
+    a {
+        text-decoration: none;
+        color: black;     
+        @include ecranSmartphone {
+            font-size: 5vh;
+        }
+        @include ecranTablet{
+            font-size: 3vh;
+        }
+        @include ecranDesktop {
+            font-size: 30px;
+        }
+    }    
+}
+
 @mixin sectionTitle {
     font-size: 1.6rem;
     font-weight: 600;

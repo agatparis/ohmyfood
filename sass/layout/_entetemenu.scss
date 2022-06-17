@@ -1,0 +1,24 @@
+.enteteMenu {
+    display:flex;
+    flex-direction: column;
+    height: 16rem;
+    background: $imgLaPaletteDuGout;
+    background-size: cover;
+    &__spacer {
+        height:14rem;
+    }
+    &__nomRestaurant {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-content: center;
+        background-color: $darkGreyColor;
+        padding: 1.3rem $sectionPadding;
+        border-top-left-radius: $radiusMenuTitle;
+        border-top-right-radius: $radiusMenuTitle;
+        h1 {
+            @include logoMenuTitle;
+        }
+    }
+    
+}
