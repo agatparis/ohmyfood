@@ -318,7 +318,7 @@ a {
   }
 }
 
-.restaurantExploration__searchEngine__btn a {
+.restaurantExploration__searchEngine__btn button {
   padding: .7rem 1.7rem;
   background: linear-gradient(#FF79DA, #9356DC);
   border: none;
@@ -331,20 +331,21 @@ a {
 }
 
 @media only screen and (min-width: 640px) and (max-width: 1024px) {
-  .restaurantExploration__searchEngine__btn a {
+  .restaurantExploration__searchEngine__btn button {
     font-size: .8rem;
   }
 }
 
 @media only screen and (min-width: 1024px) {
-  .restaurantExploration__searchEngine__btn a {
+  .restaurantExploration__searchEngine__btn button {
     font-size: .8rem;
   }
 }
 
-.restaurantExploration__searchEngine__btn a:hover {
-  animation: btnTransform .3s ease-in;
-  animation-fill-mode: both;
+.restaurantExploration__searchEngine__btn button:hover {
+  cursor: pointer;
+  animation: btnTransform .5s ease-in;
+  animation-fill-mode: forwards;
   animation-iteration-count: 2;
   animation-direction: alternate;
 }

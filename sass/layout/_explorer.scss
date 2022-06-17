@@ -70,7 +70,7 @@
                 @include ecranDesktop {
                     padding: 1rem 0 2.2rem 0;
                 }
-                a {
+                button {
                     padding: .7rem 1.7rem;
                     background: linear-gradient($secondaryColor, $primaryColor);
                     border: none;
@@ -86,9 +86,10 @@
                     @include ecranDesktop {
                         font-size: .8rem;
                     }
-                    &:hover {
-                        animation: btnTransform .3s ease-in;
-                        animation-fill-mode: both;    
+                    &:hover {                        
+                        cursor: pointer;
+                        animation: btnTransform .5s ease-in;
+                        animation-fill-mode: forwards;    
                         animation-iteration-count: 2;
                         animation-direction: alternate;
                     }
