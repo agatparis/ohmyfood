@@ -118,7 +118,7 @@ a {
 }
 
 .fonctionnement__section__item {
-  padding: .5rem;
+  padding: .5rem 0;
 }
 
 @media only screen and (min-width: 640px) and (max-width: 1024px) {
@@ -138,7 +138,6 @@ a {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  justify-content: left;
   align-items: center;
   background: #f6f6f6;
   transition: 400ms 30ms ease-in-out;
@@ -179,7 +178,7 @@ a {
   }
 }
 
-.fonctionnement__section__item__btn a h3 {
+.fonctionnement__section__item__btn h3 {
   font-weight: 500;
   font-size: 1rem;
 }
@@ -262,14 +261,12 @@ a {
 .restaurantExploration__geoloc {
   display: flex;
   flex-direction: row;
-  align-items: flex-end;
+  align-items: center;
   justify-content: center;
   background-color: #eaeaea;
   text-align: center;
   font-family: "Roboto", sans-serif;
-  font-size: 1rem;
-  font-weight: 500;
-  padding: 0 0 1rem 0;
+  padding: 0 0 16px 0;
 }
 
 @media only screen and (min-width: 640px) and (max-width: 1024px) {
@@ -278,13 +275,19 @@ a {
   }
 }
 
-.restaurantExploration__geoloc svg {
+.restaurantExploration__geoloc input[value] {
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.restaurantExploration__geoloc .material-icons {
   max-height: 1.4rem;
   padding-right: 1rem;
 }
 
 @media only screen and (min-width: 640px) and (max-width: 1024px) {
-  .restaurantExploration__geoloc svg {
+  .restaurantExploration__geoloc .material-icons {
     font-size: 1.6rem;
   }
 }
@@ -295,8 +298,8 @@ a {
   justify-content: center;
   align-items: center;
   text-align: center;
+  background-color: #f6f6f6;
   padding: 1.5rem 0;
-  transform: scale(0.9);
 }
 
 @media only screen and (min-width: 640px) and (max-width: 1024px) {
@@ -412,7 +415,9 @@ header {
   box-shadow: rgba(0, 0, 0, 0.1) 0px 3px 3px 0px;
   margin-bottom: 16px;
   padding: .7rem 0;
+  top: 0;
   position: sticky;
+  z-index: 9999;
 }
 
 header .header__spacer {
@@ -568,16 +573,18 @@ header .header__logo a {
   }
 }
 
-.restaurants__cardContent__img__new {
+.restaurants__cardContent__img__restoType[data-status="new"]::before {
+  content: 'Nouveau';
   position: relative;
   text-align: center;
   width: 6rem;
-  top: 2rem;
+  top: 1rem;
   margin-left: auto;
-  margin-right: 2rem;
+  margin-right: 1rem;
   background-color: #99E2D0;
-  padding: .3rem;
+  padding: .4rem .6rem;
   font-weight: 500;
+  font-size: .9rem;
   color: darkgreen;
 }
 

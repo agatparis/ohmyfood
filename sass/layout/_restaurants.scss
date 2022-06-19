@@ -53,20 +53,21 @@
             flex-basis: 30%;
         }
         &__img {
-
-            &__new {
-                position: relative;
-                text-align: center;
-                width:6rem;
-                top:2rem;
-                margin-left:auto;
-                margin-right: 2rem;
-                background-color: $thirdColor;
-                padding: .3rem;
-                font-weight: $bold;
-                color: darkgreen;
+            &__restoType[data-status="new"]::before {
+                    content: 'Nouveau';
+                    position: relative;
+                    text-align: center;
+                    width:6rem;
+                    top:1rem;
+                    margin-left:auto;
+                    margin-right: 1rem;
+                    background-color: $thirdColor;
+                    padding: .4rem .6rem;
+                    font-weight: $bold;
+                    font-size: .9rem;
+                    color: darkgreen;
+                }
             }
-        }
         &__legend {
             display: flex;
             flex-direction: row;
