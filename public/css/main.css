@@ -32,22 +32,24 @@ a {
 .enteteMenu {
   display: flex;
   flex-direction: column;
-  height: 16rem;
+  height: 50vh;
   background: url(../assets/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
   background-size: cover;
+  background-position: center;
 }
 .enteteMenu__spacer {
-  height: 14rem;
+  height: 42vh;
 }
 .enteteMenu__nomRestaurant {
+  height: 6vh;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-content: center;
   background-color: #eaeaea;
   padding: 1.3rem 1.5rem;
-  border-top-left-radius: 2rem;
-  border-top-right-radius: 2rem;
+  border-top-left-radius: 2.4rem;
+  border-top-right-radius: 2.4rem;
 }
 .enteteMenu__nomRestaurant h1 {
   font-family: "Shrikhand", cursive;
@@ -70,6 +72,147 @@ a {
   .enteteMenu__nomRestaurant h1 a {
     font-size: 30px;
   }
+}
+
+@-webkit-keyframes checkedRestaurantTranslation {
+  0% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes checkedRestaurantTranslation {
+  0% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes priceDishesTranslation {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-1rem);
+  }
+  100% {
+    transform: translateX(-3rem);
+  }
+}
+@keyframes priceDishesTranslation {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-1rem);
+  }
+  100% {
+    transform: translateX(-3rem);
+  }
+}
+.cardMenu {
+  background-color: #eaeaea;
+  display: flex;
+  flex-direction: column;
+}
+.cardMenu__part {
+  display: flex;
+  flex-direction: column;
+}
+.cardMenu__part h2 {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: 400;
+  line-height: 1.6rem;
+  padding-left: 1.5rem;
+}
+.cardMenu__part .line {
+  width: 2.4rem;
+  height: 0.2rem;
+  background-color: #99E2D0;
+  margin-left: 1.5rem;
+}
+.cardMenu__dishes {
+  display: flex;
+  flex-direction: column;
+  padding: 0 1rem;
+  margin: 1rem 0;
+}
+.cardMenu__dishes__dishCard {
+  display: grid;
+  grid-template-columns: auto 5rem 5rem;
+  align-items: center;
+  background-color: white;
+  border-radius: 0.7rem;
+  height: 5rem;
+  box-shadow: rgba(0, 0, 0, 0.15) 1px 5px 10px 1px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.15) 1px 5px 10px 1px;
+}
+@media only screen and (max-width: 640px) {
+  .cardMenu__dishes__dishCard {
+    display: grid;
+    grid-template-columns: auto 2.5rem 2.5rem;
+    height: 5rem;
+  }
+}
+.cardMenu__dishes__dishCard div:first-child {
+  padding: 1rem;
+}
+.cardMenu__dishes__dishCard .dishesPrice {
+  position: relative;
+  left: 5rem;
+}
+@media only screen and (max-width: 640px) {
+  .cardMenu__dishes__dishCard .dishesPrice {
+    left: 2rem;
+  }
+}
+.cardMenu__dishes__dishCard .material-icons {
+  opacity: 0;
+  z-index: 9999;
+}
+.cardMenu__dishes__dishCard:hover .material-icons {
+  display: block;
+  text-align: center;
+  padding: 1.5rem 1rem;
+  background-color: #99E2D0;
+  color: white;
+  font-size: 2rem;
+  width: 3rem;
+  max-height: 5rem;
+  border-top-right-radius: 0.7rem;
+  border-bottom-right-radius: 0.7rem;
+  -webkit-animation: checkedRestaurantTranslation 300ms 100ms ease-in-out;
+          animation: checkedRestaurantTranslation 300ms 100ms ease-in-out;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+@media only screen and (max-width: 640px) {
+  .cardMenu__dishes__dishCard:hover .material-icons {
+    position: relative;
+    left: -0.9rem;
+    text-align: center;
+    padding: 1.5rem 0.5rem;
+    font-size: 2rem;
+    width: 2.5rem;
+    max-height: 3rem;
+  }
+}
+.cardMenu__dishes__dishCard:hover .dishesPrice {
+  -webkit-animation: priceDishesTranslation 200ms ease-in;
+          animation: priceDishesTranslation 200ms ease-in;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
 }
 
 .fonctionnement {

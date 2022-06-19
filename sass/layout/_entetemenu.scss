@@ -1,13 +1,15 @@
 .enteteMenu {
     display:flex;
     flex-direction: column;
-    height: 16rem;
+    height: 50vh;
     background: $imgLaPaletteDuGout;
     background-size: cover;
+    background-position: center;
     &__spacer {
-        height:14rem;
+        height:42vh;
     }
     &__nomRestaurant {
+        height: 6vh;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -19,6 +21,5 @@
         h1 {
             @include logoMenuTitle;
         }
-    }
-    
+    }   
 }
