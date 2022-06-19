@@ -112,3 +112,26 @@ $bkptSmartphone: 640px;
     border-top-right-radius: $radiusCard;
     text-align: right;
 }
+
+@mixin btnExploreAndCommand {
+    padding: .7rem 1.7rem;
+    background: linear-gradient($secondaryColor, $primaryColor);
+    border: none;
+    border-radius: $radiusCard;
+    color: white;
+    font-size: 1rem;
+    font-weight: 500;    
+    box-shadow: rgba(0, 0, 0, 0.15) 1px 5px 10px 1px;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.15) 1px 5px 10px 1px;                        
+    @include ecranTablet {
+        font-size: .8rem;
+    }
+    @include ecranDesktop {
+        font-size: .8rem;
+    }
+    &:hover {                        
+        cursor: pointer;
+        animation: btnTransform 600ms 50ms ease-out;
+        animation-fill-mode: forwards; 
+    }
+}

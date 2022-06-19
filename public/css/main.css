@@ -214,6 +214,38 @@ a {
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
 }
+.cardMenu form {
+  padding: 2rem 0 3rem 0;
+  text-align: center;
+}
+.cardMenu form button {
+  padding: 0.7rem 1.7rem;
+  background: linear-gradient(#FF79DA, #9356DC);
+  border: none;
+  border-radius: 1.8rem;
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
+  box-shadow: rgba(0, 0, 0, 0.15) 1px 5px 10px 1px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.15) 1px 5px 10px 1px;
+}
+@media only screen and (min-width: 640px) and (max-width: 1024px) {
+  .cardMenu form button {
+    font-size: 0.8rem;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .cardMenu form button {
+    font-size: 0.8rem;
+  }
+}
+.cardMenu form button:hover {
+  cursor: pointer;
+  -webkit-animation: btnTransform 600ms 50ms ease-out;
+          animation: btnTransform 600ms 50ms ease-out;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
 
 .fonctionnement {
   display: flex;
@@ -508,8 +540,8 @@ a {
 }
 .restaurantExploration__searchEngine__btn button:hover {
   cursor: pointer;
-  -webkit-animation: btnTransform 400ms 100ms ease-in;
-          animation: btnTransform 400ms 100ms ease-in;
+  -webkit-animation: btnTransform 600ms 50ms ease-out;
+          animation: btnTransform 600ms 50ms ease-out;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
