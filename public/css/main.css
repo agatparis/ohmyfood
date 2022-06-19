@@ -200,31 +200,43 @@ a {
 
 @-webkit-keyframes btnTransform {
   15% {
-    box-shadow: rgba(0, 0, 0, 0.2) 1px 7px 5px 1px;
-    -webkit-box-shadow: rgba(0, 0, 0, 0.2) 1px 7px 5px 1px;
+    box-shadow: rgba(0, 0, 0, 0.2) 1px 2.5px 5px 1px;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.2) 1px 2.5px 5px 1px;
     filter: grayscale(5%);
     transform: scale(1);
   }
-  100% {
-    box-shadow: rgba(0, 0, 0, 0.2) 1px 7px 10px 1px;
-    -webkit-box-shadow: rgba(0, 0, 0, 0.2) 1px 7px 10px 1px;
+  60% {
+    box-shadow: rgba(0, 0, 0, 0.2) 1px 5px 10px 1px;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.2) 1px 5px 10px 1px;
     filter: grayscale(10%);
-    transform: scale(1.1, 1);
+    transform: scale(1.015, 1);
+  }
+  100% {
+    box-shadow: rgba(0, 0, 0, 0.2) 1px 2.5px 5px 1px;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.2) 1px 2.5px 5px 1px;
+    filter: grayscale(5%);
+    transform: scale(1);
   }
 }
 
 @keyframes btnTransform {
   15% {
-    box-shadow: rgba(0, 0, 0, 0.2) 1px 7px 5px 1px;
-    -webkit-box-shadow: rgba(0, 0, 0, 0.2) 1px 7px 5px 1px;
+    box-shadow: rgba(0, 0, 0, 0.2) 1px 2.5px 5px 1px;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.2) 1px 2.5px 5px 1px;
     filter: grayscale(5%);
     transform: scale(1);
   }
-  100% {
-    box-shadow: rgba(0, 0, 0, 0.2) 1px 7px 10px 1px;
-    -webkit-box-shadow: rgba(0, 0, 0, 0.2) 1px 7px 10px 1px;
+  60% {
+    box-shadow: rgba(0, 0, 0, 0.2) 1px 5px 10px 1px;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.2) 1px 5px 10px 1px;
     filter: grayscale(10%);
-    transform: scale(1.1, 1);
+    transform: scale(1.015, 1);
+  }
+  100% {
+    box-shadow: rgba(0, 0, 0, 0.2) 1px 2.5px 5px 1px;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.2) 1px 2.5px 5px 1px;
+    filter: grayscale(5%);
+    transform: scale(1);
   }
 }
 .restaurantExploration {
@@ -251,6 +263,7 @@ a {
   border: none;
   font-size: 1rem;
   font-weight: 600;
+  background-color: #eaeaea;
 }
 .restaurantExploration__geoloc .material-icons {
   max-height: 1.4rem;
@@ -352,14 +365,10 @@ a {
 }
 .restaurantExploration__searchEngine__btn button:hover {
   cursor: pointer;
-  -webkit-animation: btnTransform 0.5s ease-in;
-          animation: btnTransform 0.5s ease-in;
+  -webkit-animation: btnTransform 400ms 100ms ease-in;
+          animation: btnTransform 400ms 100ms ease-in;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
-  -webkit-animation-iteration-count: 2;
-          animation-iteration-count: 2;
-  -webkit-animation-direction: alternate;
-          animation-direction: alternate;
 }
 
 header {
@@ -547,15 +556,15 @@ header .header__logo a {
   padding: 0;
   position: relative;
 }
-.restaurants__cardContent__legend__favorite .fa-heart {
+.restaurants__cardContent__legend__favorite .material-icons {
   position: absolute;
   font-size: 2rem;
 }
-.restaurants__cardContent__legend__favorite .fa-regular {
+.restaurants__cardContent__legend__favorite .favorite_border {
   right: 3%;
   z-index: 1;
 }
-.restaurants__cardContent__legend__favorite .fa-solid {
+.restaurants__cardContent__legend__favorite .favorite {
   color: transparent;
   z-index: 0;
   right: 3%;
@@ -568,10 +577,10 @@ header .header__logo a {
 .restaurants__cardContent__legend__favorite__radiobtn {
   display: none;
 }
-.restaurants__cardContent__legend__favorite__radiobtn:checked ~ label .fa-regular {
+.restaurants__cardContent__legend__favorite__radiobtn:checked ~ label .favorite_border {
   opacity: 0;
 }
-.restaurants__cardContent__legend__favorite__radiobtn:checked ~ label .fa-solid {
+.restaurants__cardContent__legend__favorite__radiobtn:checked ~ label .favorite {
   transition: all 600ms;
   transform: scale(1);
   opacity: 1;

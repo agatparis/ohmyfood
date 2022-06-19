@@ -87,15 +87,15 @@
             &__favorite {
                 padding:0;
                 position: relative;
-                .fa-heart {
+                .material-icons {
                     position: absolute;
                     font-size: 2rem;
                 }
-                .fa-regular {
+                .favorite_border {
                     right: 3%;
                     z-index: 1;
                 }
-                .fa-solid {
+                .favorite {
                     color: transparent;
                     z-index: 0;
                     right: 3%;
@@ -108,10 +108,10 @@
                 // autre moyen d'écrire en sass ?
                 &__radiobtn {
                     display: none;
-                    &:checked ~ label .fa-regular {
+                    &:checked ~ label .favorite_border {
                         opacity: 0;
                     }
-                    &:checked ~ label .fa-solid {
+                    &:checked ~ label .favorite {
                         transition: all 600ms;
                         transform: scale(1);
                         opacity:1;
