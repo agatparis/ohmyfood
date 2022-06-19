@@ -1,60 +1,70 @@
 .fonctionnement {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
     background-color: white;
-    padding: $sectionPadding;
     &__title h2 {
         @include sectionTitle;
+        padding: $sectionPadding;
     }
     &__section {
-        padding: 2rem 0;
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr;
+        row-gap: 1.5rem;
+        padding: 0 2rem 2rem 2rem;
         @include ecranDesktop {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: auto;
+            column-gap: 2rem;
+            row-gap: 2rem;
+            padding: 0 2rem 2rem 2rem;;
+            }
+        &__item {
             display: flex;
             flex-direction: row;
-            justify-content: space-around;
-        }
-        &__item {
-            padding: .5rem 0;
-            @include ecranTablet {
-                width:60%;
+            flex-wrap: nowrap;
+            align-items: center;
+            justify-content: left;
+            background: $mediumGreyColor;
+            transition: 400ms 30ms ease-in-out;       
+            padding: 1rem;
+            border-radius: 1.6rem;
+            @include btnShadow;
+            counter-increment: nmbr;
+            &::before {
+                content: counter(nmbr, decimal);
+                position: relative;
+                left:-1.7rem;
+                border-radius: 100%;
+                background-color: $primaryColor;
+                width:2rem;
+                height:2rem;
+                text-align: center;
+                line-height: 2rem;
+                color: white;
+            }
+            h3 {
+                font-weight: $bold;
+                font-size: 1rem;
+                }
+            .material-icons {
+                @include iconsAppearance;
+            }
+            &:hover, &:active {
+                background: $primaryColorTransparent;
+                .material-icons {
+                    color:$primaryColor;                        
+                    transition: all 600ms ease-in-out;
+                }
+            }
+            @include ecranTablet { //problèmes de gestion de la largeur sur Ipad & en 1024px
+                width:80%;
                 margin:auto;
+                padding: 1rem;
             }
             @include ecranDesktop {
-                padding: .5rem 2rem;
-            }
-            &__btn {
-                display: flex;
-                flex-direction: row;
-                flex-wrap: nowrap;
-                align-items: center;
-                background: $mediumGreyColor;
-                transition: 400ms 30ms ease-in-out;
-                padding:1.5rem 2rem;
-                border-radius: 1.6rem;
-                @include btnShadow;
-                @include ecranDesktop {
-                    width:90%;
-                }
-                &__nbr {
-                    @include indentNumber;
-                }
-                h3 {
-                    font-weight: $bold;
-                    font-size: 1rem;
-                    }
-                svg {
-                    @include iconsAppearance;
-                    padding-left: 2rem;
-                    fill:gray;
-                }
-                &:hover, &:active {
-                    background: $primaryColorTransparent;
-                    svg {
-                        fill:$primaryColor;                        
-                        transition: all 600ms ease-in-out;
-                    }
-                }
+                padding: 1rem;
             }
         }
     

@@ -15,16 +15,16 @@
 
 
 .restaurantExploration {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 3fr;
         &__geoloc {
-            display: flex;
+            display: flex; //flex plus simple pour des boites à peu d'éléments
             flex-direction: row;
-            align-items: center;
             justify-content: center;
+            text-align: center; // pour assurer le responsive
+            flex-wrap: nowrap; // pour assurer le maintien sur une ligne
             background-color: $darkGreyColor;
-            text-align: center;
             font-family: $textFontFamily;
             padding: 0 0 16px 0;
             @include ecranTablet {
@@ -40,7 +40,7 @@
             }
         }
         &__searchEngine {
-            display: flex;
+            display: flex; // utilisation des flexbox car seulement 3 éléments sans modifications de disposition selon les écrans
             flex-direction: column;
             justify-content: center;
             align-items: center;
