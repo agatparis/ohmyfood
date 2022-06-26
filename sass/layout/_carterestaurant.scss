@@ -14,10 +14,10 @@
         transform: translateX(0);
     }
     50% {
-        transform: translateX(-1rem);
+        transform: translateX(-3rem);
     }
     100% {
-        transform: translateX(-3rem);
+        transform: translateX(-5rem);
     }  
 }
 
@@ -25,9 +25,14 @@
     background-color: $darkGreyColor;
     display: flex;
     flex-direction: column;
+    @include ecranDesktop {
+        display: flex;
+        flex-direction: row;        
+    }
     &__part {
         display:flex;
         flex-direction: column;
+        flex-basis: 30%;
         h2 {
             font-family: $textFontFamily;
             font-size: 1rem;
@@ -47,35 +52,9 @@
         display: flex;
         flex-direction: column;
         padding:0 1rem;
-        margin: 1rem 0;
-        &__dishCard {
-            display: grid;
-            grid-template-columns: auto 5rem 5rem;
-            align-items: center;
-            background-color: white;
-            border-radius: .7rem;
-            height: 5rem;
-            @include btnShadow;
-            @include ecranSmartphone {
-                display: grid;
-                grid-template-columns: auto 2.5rem 2.5rem;
-                height:5rem;
-            }
-            div:first-child {
-                padding:1rem;
-            }
-            .dishesPrice {
-                position: relative;
-                left:5rem;
-                @include ecranSmartphone {
-                    left:2rem;
-                }
-            }
-            .material-icons {
-                opacity:0;
-                z-index: 9999;
-            }
-            &:hover .material-icons {
+        input[type="radio"] {
+            display:none;
+            &:checked + label .material-icons {
                 display: block;
                 text-align: center;
                 padding: 1.5rem 1rem;
@@ -97,18 +76,85 @@
                     width:2.5rem;
                     max-height: 3rem;
                 }
-            }
-            &:hover .dishesPrice {
+            }  
+            &:checked + label .dishesPrice {
                 animation: priceDishesTranslation 200ms ease-in;
                 animation-fill-mode: both;
             }
         }
+        &__dishCard {
+            display: grid;
+            grid-template-columns: auto 5rem 5rem;
+            align-items: end;
+            background-color: white;
+            border-radius: .7rem;
+            height: 5rem;
+            margin: .5rem 0 .5rem 0;
+            @include btnShadow;
+            @include ecranSmartphone {
+                display: grid;
+                grid-template-columns: auto 2.5rem 2.5rem;
+                height:5rem;
+            }
+            .dishesName {
+                padding:1rem;
+                text-align: left;
+                white-space: nowrap;
+                overflow:hidden;
+                width: calc(100% + 5rem);
+            }
+            .dishesPrice {
+                position: relative;
+                left:5rem;
+                height: 3rem;
+                padding: 1rem;
+                border-radius: .7rem;
+                background-color: white;
+                @include ecranSmartphone {
+                    left:2rem;
+                }
+            }
+            .material-icons {
+                opacity:0;
+                z-index: 9999;
+            }
+        }
     }
     form {
-        padding:2rem 0 3rem 0;
+        padding:1rem 0 2rem 0;
         text-align: center;
         button {
             @include btnExploreAndCommand;
         }
     }
 }
+
+/*
+&:hover ~.material-icons {
+                    display: block;
+                    text-align: center;
+                    padding: 1.5rem 1rem;
+                    background-color: $thirdColor;
+                    color: white;
+                    font-size: 2rem;
+                    width: 3rem;
+                    max-height: 5rem;
+                    border-top-right-radius: .7rem;
+                    border-bottom-right-radius: .7rem;
+                    animation: checkedRestaurantTranslation 300ms 100ms ease-in-out;
+                    animation-fill-mode: both;
+                    @include ecranSmartphone {
+                        position: relative;
+                        left: -.9rem;
+                        text-align: center;
+                        padding: 1.5rem .5rem;
+                        font-size: 2rem;
+                        width:2.5rem;
+                        max-height: 3rem;
+                    }
+                }      
+                &:hover {
+                    animation: priceDishesTranslation 200ms ease-in;
+                    animation-fill-mode: both;
+                }
+                */
