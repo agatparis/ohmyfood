@@ -98,10 +98,22 @@ a {
     transform: translateX(0);
   }
   50% {
-    transform: translateX(-3rem);
+    transform: translateX(-4rem);
   }
   100% {
-    transform: translateX(-5rem);
+    transform: translateX(-7rem);
+  }
+}
+
+@keyframes priceDishesTranslationSmartphone {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-2rem);
+  }
+  100% {
+    transform: translateX(-3.8rem);
   }
 }
 
@@ -168,11 +180,10 @@ a {
 @media only screen and (max-width: 640px) {
   .cardMenu__dishes input[type="radio"]:checked + label .material-icons {
     position: relative;
-    left: -.9rem;
     text-align: center;
     padding: 1.5rem .5rem;
     font-size: 2rem;
-    width: 2.5rem;
+    width: 3rem;
     max-height: 3rem;
   }
 }
@@ -182,10 +193,21 @@ a {
   animation-fill-mode: both;
 }
 
+@media only screen and (max-width: 640px) {
+  .cardMenu__dishes input[type="radio"]:checked + label .dishesPrice {
+    animation: priceDishesTranslationSmartphone 200ms ease-in;
+    animation-fill-mode: both;
+  }
+}
+
+.cardMenu__dishes input[type="radio"]:checked + label .dishesName {
+  width: 13rem;
+}
+
 .cardMenu__dishes__dishCard {
-  display: grid;
-  grid-template-columns: auto 5rem 5rem;
-  align-items: end;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   background-color: white;
   border-radius: .7rem;
   height: 5rem;
@@ -194,40 +216,50 @@ a {
   -webkit-box-shadow: rgba(0, 0, 0, 0.15) 1px 5px 10px 1px;
 }
 
-@media only screen and (max-width: 640px) {
-  .cardMenu__dishes__dishCard {
-    display: grid;
-    grid-template-columns: auto 2.5rem 2.5rem;
-    height: 5rem;
-  }
-}
-
 .cardMenu__dishes__dishCard .dishesName {
   padding: 1rem;
   text-align: left;
   white-space: nowrap;
   overflow: hidden;
-  width: calc(100% + 5rem);
+  text-overflow: ellipsis;
+}
+
+.cardMenu__dishes__dishCard .dishesName h3 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .cardMenu__dishes__dishCard .dishesPrice {
-  position: relative;
-  left: 5rem;
+  flex-basis: 3rem;
+  flex-shrink: 0;
+  width: 2rem;
   height: 3rem;
-  padding: 1rem;
+  position: absolute;
+  right: 2rem;
   border-radius: .7rem;
-  background-color: white;
+  background-color: transparent;
+  margin-top: 2.5rem;
 }
 
 @media only screen and (max-width: 640px) {
   .cardMenu__dishes__dishCard .dishesPrice {
-    left: 2rem;
+    right: 2rem;
+    width: 1.5rem;
   }
 }
 
 .cardMenu__dishes__dishCard .material-icons {
+  flex-basis: 5rem;
+  flex-shrink: 0;
+  position: relative;
   opacity: 0;
-  z-index: 9999;
+}
+
+@media only screen and (max-width: 640px) {
+  .cardMenu__dishes__dishCard .material-icons {
+    flex-basis: 3rem;
+  }
 }
 
 .cardMenu form {
@@ -265,35 +297,6 @@ a {
   animation-fill-mode: forwards;
 }
 
-/*
-&:hover ~.material-icons {
-                    display: block;
-                    text-align: center;
-                    padding: 1.5rem 1rem;
-                    background-color: $thirdColor;
-                    color: white;
-                    font-size: 2rem;
-                    width: 3rem;
-                    max-height: 5rem;
-                    border-top-right-radius: .7rem;
-                    border-bottom-right-radius: .7rem;
-                    animation: checkedRestaurantTranslation 300ms 100ms ease-in-out;
-                    animation-fill-mode: both;
-                    @include ecranSmartphone {
-                        position: relative;
-                        left: -.9rem;
-                        text-align: center;
-                        padding: 1.5rem .5rem;
-                        font-size: 2rem;
-                        width:2.5rem;
-                        max-height: 3rem;
-                    }
-                }      
-                &:hover {
-                    animation: priceDishesTranslation 200ms ease-in;
-                    animation-fill-mode: both;
-                }
-                */
 .fonctionnement {
   display: flex;
   flex-direction: column;
