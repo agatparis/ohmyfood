@@ -113,6 +113,28 @@ $bkptSmartphone: 640px;
     text-align: right;
 }
 
+@keyframes btnTransform {
+    15% {
+        box-shadow: rgba(0, 0, 0, 0.2) 1px 2.5px 5px 1px;
+        -webkit-box-shadow: rgba(0, 0, 0, 0.2) 1px 2.5px 5px 1px;
+        filter: grayscale(5%); 
+        transform: scale(1);
+    }
+    60% {
+        box-shadow: rgba(0, 0, 0, 0.2) 1px 5px 10px 1px;
+        -webkit-box-shadow: rgba(0, 0, 0, 0.2) 1px 5px 10px 1px;
+        filter: grayscale(10%); 
+        transform: scale(1.6, 1);
+    }
+    100% {
+        box-shadow: rgba(0, 0, 0, 0.2) 1px 2.5px 5px 1px;
+        -webkit-box-shadow: rgba(0, 0, 0, 0.2) 1px 2.5px 5px 1px;
+        filter: grayscale(5%); 
+        transform: scale(1);
+    }
+}
+
+
 @mixin btnExploreAndCommand {
     padding: .7rem 1.7rem;
     background: linear-gradient($secondaryColor, $primaryColor);
@@ -131,7 +153,7 @@ $bkptSmartphone: 640px;
     }
     &:hover {                        
         cursor: pointer;
-        animation: btnTransform 600ms 50ms ease-out;
+        animation: btnTransform 400ms 50ms ease-out;
         animation-fill-mode: forwards; 
     }
 }
