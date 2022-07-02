@@ -64,16 +64,37 @@
 }
 
 @keyframes priceDishesTranslationSmartphone {
-        0% {
-            transform: translateX(0);
-        }
-        50% {
-            transform: translateX(-1.7rem);
-        }
-        100% {
-            transform: translateX(-3rem);
-        }
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(-1.7rem);
+    }
+    100% {
+        transform: translateX(-3rem);
+    }
 }
+
+@keyframes dishesProgressivApparition {
+    0% {
+        transform:translateY(0rem);
+        filter: blur(5px);
+        opacity: 0;
+    }
+    100% {
+        transform:translateY(-$topBase);
+        filter: blur(0);
+        opacity: 1;
+    }
+}
+
+@for $idop from 1 to 12 {
+    .menuItem#{$idop} {
+            $duration: ($idop * 160);
+            animation: dishesProgressivApparition #{$duration}ms ease-in;
+            animation-fill-mode: both;
+        }
+    }
 
 .cardMenu {
     background-color: $darkGreyColor;
@@ -88,7 +109,11 @@
         display:flex;
         flex-direction: column;
         flex-basis: auto;
-        h2 {
+        position: relative;
+        top:20px;
+        animation: dishesProgressivApparition 400ms ease-in;
+        animation-fill-mode: both;
+        h2 { 
             font-family: $textFontFamily;
             font-size: 1rem;
             text-transform: uppercase;
@@ -106,7 +131,7 @@
     &__dishes {
         display: flex;
         flex-direction: column;
-        padding:0 1rem;
+        padding: 1rem 1rem 0 1rem;
         input[type="radio"] {
             display:none;
             &:checked + label .check_circle__background {
@@ -223,11 +248,15 @@
     }
 }
 form {
-    padding:1rem 0 2rem 0;
+    padding:1rem 0 1rem 0;
     text-align: center;
     background-color: $darkGreyColor;
     #commandButton {
         @include btnExploreAndCommand;
     }
+}
+
+.commandForm {
+    padding:0 0 5rem 0;
 }
 

@@ -80,6 +80,9 @@
                 @include ecranDesktop {
                     padding: 1rem 0 2.2rem 0;
                 }
+                form {
+                    background-color: $mediumGreyColor;
+                }
                 button {
                     @include btnExploreAndCommand;
                 }

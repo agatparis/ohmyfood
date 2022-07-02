@@ -9,6 +9,8 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        background-color: $mediumGreyColor;
+        text-align: left;
         @include ecranTablet {
             display: grid; // grid pour plus de précision sur la disposition
             grid-template-columns: 1fr 1fr;

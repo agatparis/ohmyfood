@@ -21,5 +21,8 @@
         h1 {
             @include logoMenuTitle;
         }
+        @include ecranDesktop {
+            justify-content: center;
+        }
     }   
 }
