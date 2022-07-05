@@ -8,22 +8,17 @@
     &__list__form {
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
         background-color: $mediumGreyColor;
         text-align: left;
         @include ecranTablet {
-            display: grid; // grid pour plus de précision sur la disposition
-            grid-template-columns: 1fr 1fr;
-            grid-template-rows: auto;
-            column-gap: 1rem;
-            row-gap: 2rem;
+            display: flex;
+            flex-direction: row;
+
         }
         @include ecranDesktop {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            grid-template-rows: auto;
-            column-gap: 1rem;
-            row-gap: 2rem;
+            display: flex;
+            flex-direction: row;
+
         }
     }
     &__title h2 {
@@ -36,6 +31,7 @@
         border-radius: $radiusCard;
         margin:3% 1%;
         @include btnShadow;
+        z-index:999;
         &:first-child &__img {
             background: $imgLaPaletteDuGout;
             @include restaurantImgProperties;

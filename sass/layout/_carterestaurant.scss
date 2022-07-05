@@ -44,10 +44,10 @@
         transform: translateX(0);
     }
     50% {
-        transform: translateX(-2.5rem);
+        transform: translateX(-2rem);
     }
     100% {
-        transform: translateX(-5rem);
+        transform: translateX(-4rem);
     }
 }
 
@@ -103,7 +103,8 @@
     justify-content: center;
     @include ecranDesktop {
         display: flex;
-        flex-direction: row;        
+        flex-direction: row; 
+        justify-content: space-around;     
     }
     &__part {
         display:flex;
@@ -166,6 +167,12 @@
             }
             &:checked + label .dishesName {
                 max-width: 13rem;
+                @include ecranDesktop {
+                    max-width: 10rem;
+                }
+                @include ecranTablet {
+                    max-width: 20rem;
+                }
             }
         }
         &__dishCard {
@@ -180,7 +187,7 @@
             position: relative;
             @include btnShadow;
             @include ecranDesktop {
-                width: 25rem;
+                width: 19rem;
             }
             .dishesName {
                 padding:1rem;
@@ -210,7 +217,7 @@
                 }
                 @include ecranDesktop {
                     position: absolute;
-                    right: 1rem;
+                    right: 0.5rem;
                 }
             }
             .check_circle__background {
@@ -227,6 +234,9 @@
                 @include ecranSmartphone {
                     width: 8rem;
                 }
+                @include ecranDesktop {
+                    width: 8rem;
+                }
             }
             .material-icons {
                 text-align: center;
@@ -240,7 +250,8 @@
                     flex-basis: 3rem;
                 }
                 @include ecranDesktop {
-                    flex-basis: 3rem;
+                    padding: 1.5rem 1rem;
+                    flex-basis: 1.7rem;
                 }
             }
             

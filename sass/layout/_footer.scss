@@ -14,10 +14,26 @@
         justify-content: space-around;
         padding-top:.8rem;
         line-height: 1.7;
+        @include ecranDesktop {
+            display: flex;
+            flex-direction: row;
+            justify-content: start;
+        }
+        @include ecranTablet {
+            display: flex;
+            flex-direction: row;
+            justify-content: start;            
+        }
         a {
             color: white;
             font-family: $textFontFamily;
             font-size: .9rem;
+            @include ecranDesktop {
+                padding: 0 1rem;
+            }
+            @include ecranTablet {
+                padding: 0 1rem;
+            }
             span {
                 font-size: .7rem;
                 padding:0 .7rem 0 0;
