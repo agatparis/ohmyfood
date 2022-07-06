@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ohmyfood</title>
+  <link rel="stylesheet" href="public/css/main.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Shrikhand&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+  rel="stylesheet"> <!--choix des icones google (Material design)-->
+</head> 
+  <body class="bodyMenu">
+
+<header> <!-- entête du logo -->
+  <span class="header__spacer"></span>
+  <span class="header__logo">
+    <a href="index.html">
+      ohmyfood
+    </a>
+  </span>
+</header> <!-- fin de l'entête du logo -->
+
+<section class="enteteMenu">
+    <div class="enteteMenu__spacer"></div>
+    <div class="enteteMenu__nomRestaurant">
+        <h1>À la française</h1>
+        <i class="fa-regular fa-heart"></i>
+    </div>
+</section>
+
+<section>
+<div class="cardMenu"> <!-- début du menu -->
+    <div class="cardMenu__part"> <!-- les entrées du menu-->
+        <h2>Entrées</h2>
+        <div class="line"></div>
+    <form>
+      <div class="cardMenu__dishes">
+        <input type="radio" name="starter" id="starter1"/>       
+        <label for="starter1" class="cardMenu__dishes__dishCard menuItem1">
+          <div class="dishesName">
+            <h3>Tartare de poulpe acidulé</h3>
+            <span>Aux zestes d'orange</span>
+          </div>
+          <div class="dishesPrice">25€</div>
+          <div class="check_circle__background"></div>
+          <div class="material-icons">
+              check_circle
+          </div>
+        </label>
+        <input type="radio" name="starter" id="starter2"/>       
+        <label for="starter2" class="cardMenu__dishes__dishCard menuItem2">
+          <div class="dishesName">
+            <h3>Velouté de légumes d'antan</h3>
+            <span>Carotte, panais, topinambour</span>
+          </div>
+          <div class="dishesPrice">35€</div>
+          <div class="check_circle__background"></div>
+          <div class="material-icons">
+              check_circle
+          </div>
+        </label>
+        <input type="radio" name="starter" id="starter3"/>       
+        <label for="starter3" class="cardMenu__dishes__dishCard menuItem3">
+          <div class="dishesName">
+            <h3>Soupe à l'oignon</h3>
+            <span>Revisitée</span>
+          </div>
+          <div class="dishesPrice">20€</div>
+          <div class="check_circle__background"></div>
+          <div class="material-icons">
+              check_circle
+          </div>
+        </label>
+       </div>
+  </form> <!--fin des entrées du menu-->
+  </div>
+    <div class="cardMenu__part"> <!-- les plats du menu -->
+        <h2>Plats</h2>
+        <div class="line"></div>
+        <form>
+          <div class="cardMenu__dishes">
+            <input type="radio" name="dish" id="dish1"/>       
+            <label for="dish1" class="cardMenu__dishes__dishCard menuItem4">
+              <div class="dishesName">
+                <h3>Coquilles Saint-Jacques</h3>
+                <span>Accompagnées d'une purée de panais</span>
+              </div>
+              <div class="dishesPrice">40€</div>
+              <div class="check_circle__background"></div>
+              <div class="material-icons">
+                  check_circle
+              </div>
+            </label>
+            <input type="radio" name="dish" id="dish2"/>       
+            <label for="dish2" class="cardMenu__dishes__dishCard menuItem5">
+              <div class="dishesName">
+                <h3>Magret de canard</h3>
+                <span>Et parmentier de pommes de terre</span>
+              </div>
+              <div class="dishesPrice">35€</div>
+              <div class="check_circle__background"></div>
+              <div class="material-icons">
+                  check_circle
+              </div>
+            </label>
+            <input type="radio" name="dish" id="dish3"/>       
+            <label for="dish3" class="cardMenu__dishes__dishCard menuItem6">
+              <div class="dishesName">
+                <h3>Pigeonneau d’Ille-et-Vilaine</h3>
+                <span>Sur son lit de gnocchis aux légumes</span>
+              </div>
+              <div class="dishesPrice">44€</div>
+              <div class="check_circle__background"></div>
+              <div class="material-icons">
+                  check_circle
+              </div>
+            </label>
+           </div>
+      </form> <!-- fin des plats du menu -->
+    </div>
+    <div class="cardMenu__part"><!-- desserts du menu-->
+        <h2>Desserts</h2>
+        <div class="line"></div>
+        <form>
+          <div class="cardMenu__dishes">
+            <input type="radio" name="dessert" id="dessert1"/>       
+            <label for="dessert1" class="cardMenu__dishes__dishCard menuItem7">
+              <div class="dishesName">
+                <h3>Pétales de violettes glacés</h3>
+                <span>Et purée de noisettes</span>
+              </div>
+              <div class="dishesPrice">18€</div>
+              <div class="check_circle__background"></div>
+              <div class="material-icons">
+                  check_circle
+              </div>
+            </label>
+            <input type="radio" name="dessert" id="dessert2"/>       
+            <label for="dessert2" class="cardMenu__dishes__dishCard menuItem8">
+              <div class="dishesName">
+                <h3>Fondant au chocolat</h3>
+                <span>Revisité</span>
+              </div>
+              <div class="dishesPrice">22€</div>
+              <div class="check_circle__background"></div>
+              <div class="material-icons">
+                  check_circle
+              </div>
+            </label>
+            <input type="radio" name="dessert" id="dessert3"/>       
+            <label for="dessert3" class="cardMenu__dishes__dishCard menuItem9">
+              <div class="dishesName">
+                <h3>Millefeuille croustillant</h3>
+                <span>Myrtilles et pâte d’amande</span>
+              </div>
+              <div class="dishesPrice">23€</div>
+              <div class="check_circle__background"></div>
+              <div class="material-icons">
+                check_circle
+            </div>
+            </label>
+           </div>
+      </form> <!-- fin des desserts-->
+    </div>
+  </div>
+    <form class="commandForm">
+        <button id="commandButton" type="submit">Commander</button>
+      </form>
+</section>
+
+
+<footer class="footer"> <!-- début du footer -->
+    <div class="footer__title">ohmyfood</div> <!-- titre du footer -->
+    <nav class="footer__content"> <!-- début du menu du footer -->
+        <a href="#"> 
+          <span class="material-icons">
+          restaurant
+          </span>
+          Proposer un restaurant</a>
+        <a href="#">
+          <span class="material-icons">
+          handshake
+          </span>
+          Devenir partenaire</a>
+        <a href="#">Mentions légales</a>
+        <a href="#">Contact</a>
+    </nav>  <!-- fin du menu du footer -->
+  </footer> <!-- fin du footer -->
+  
+  </body>
+  </html>
