@@ -8,8 +8,11 @@
     &__list__form {
         display: flex;
         flex-direction: column;
+        justify-content: space-around;
+        flex-wrap: wrap;
         background-color: $mediumGreyColor;
         text-align: left;
+        margin: auto;
         @include ecranTablet {
             display: flex;
             flex-direction: row;
@@ -31,7 +34,7 @@
         border-radius: $radiusCard;
         margin:3% 1%;
         @include btnShadow;
-        z-index:999;
+        z-index:997;
         &:first-child &__img {
             background: $imgLaPaletteDuGout;
             @include restaurantImgProperties;
