@@ -11,10 +11,11 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"> <!--choix des icones google (Material design)-->
 </head> 
-  <body class="indexBody">
+  <body>
     <div class="loader__section">
       <span class="loader__section__loader"></span>
     </div>
+<div class="indexBody">
 <header> <!-- entête du logo -->
   <span class="header__spacer"></span>
   <span class="header__logo">
@@ -27,12 +28,13 @@
 
 <section class="restaurantExploration"> <!-- section de recherche des restaurants -->
   <div class="restaurantExploration__geoloc"><!-- début geoloc -->
+
+    <input type="button" value="Paris, Belleville" name="geoloc" id="geoloc"/> 
     <label for="geoloc">
       <span class="material-icons">
         location_on
         </span>
     </label>
-    <input type="button" value="Paris, Belleville" name="geoloc"/> 
   </div>   <!-- fin geoloc -->
   <div class="restaurantExploration__searchEngine"> <!-- début de la recherche -->
     <div class="restaurantExploration__searchEngine__title1">
@@ -87,8 +89,8 @@
           <div class="restaurants__cardContent__legend__title">
           <div class="restaurants__cardContent__legend__title__name"><h3>La palette du goût</h3></div>
           <div class="restaurants__cardContent__legend__title__localisation">Ménilmontant</div>
-          </div>
-          <span class="restaurants__cardContent__legend__favorite">
+        </div>
+        <span class="restaurants__cardContent__legend__favorite">
             <input type="checkbox" name="restos" id="resto1" class="restaurants__cardContent__legend__favorite__radiobtn"/>
             <label for="resto1">
               <span class="material-icons favorite_border">
@@ -99,8 +101,9 @@
                   </span>
             </label>
           </span>
-          </div>
-      </a> <!-- fin de la fiche resto sous forme de carte -->
+        </div>
+        </a>
+       <!-- fin de la fiche resto sous forme de carte -->
       <a href="restaurant2.html" class="restaurants__cardContent">  <!-- début de la fiche resto sous forme de carte -->
         <div class="restaurants__cardContent__img">
           <div class="restaurants__cardContent__img__restoType" data-status="new"></div>
@@ -187,9 +190,9 @@
         </span>
         Devenir partenaire</a>
       <a href="#">Mentions légales</a>
-      <a href="#">Contact</a>
+      <a href="mailto:contact@ohmyfood.com">Contact</a>
   </nav>  <!-- fin du menu du footer -->
 </footer> <!-- fin du footer -->
-
+</div>
 </body>
 </html>

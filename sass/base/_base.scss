@@ -4,40 +4,45 @@
     padding:0;
 }
 
-.indexBody {
-    background: $darkGreyColor;
-    .loader__section {
-        display: flex;
-        justify-content: center;
-        align-content: center;
-        height: 100%;
-        width:100%;
+body {
+  background: $darkGreyColor;
+  .loader__section {
+    position: absolute;
+    top:0;
+    width:100%;
+    z-index: 998;
+    filter: blur(0) !important;
+    &__loader {
+        width: 88px;
+        height: 88px;
         position: absolute;
+        top: calc(25vh);
+        left: calc(50% - 44px);
+        margin: auto;
         z-index: 999;
-        animation: animloaderBackground 10s;
+    }
+    &__loader::after,
+    &__loader::before {
+        content: '';  
+        box-sizing: border-box;
+        width: 88px;
+        height: 88px;
+        position: absolute;
+        top: calc(25vh);
+        left: calc(50% - 44px);
+        border-radius: 50%;
+        border: 4px solid $primaryColor;
+        z-index: 999;
+        animation: animloader 2s linear 2;
         animation-fill-mode: forwards;
-        &__loader {
-            width: 48px;
-            height: 48px;
-            display: inline-block;
-        }
-        &__loader::after,
-        &__loader::before {
-            content: '';  
-            box-sizing: border-box;
-            width: 48px;
-            height: 48px;
-            position: absolute;
-            top: calc(50% - 24px);
-            border-radius: 50%;
-            border: 2px solid $primaryColor;
-            z-index: 999;
-            animation: animloader 2s linear 2;
-            animation-fill-mode: forwards;
-        }
-        &__loader::after {
-            animation-delay: 1s;        
-        }
+    }
+
+}
+
+.indexBody {
+    filter: blur(40px);
+    animation: animloaderBackground 4s;
+    animation-fill-mode: both;
         }
       @keyframes animloader {
         0% {
@@ -51,15 +56,24 @@
       }
       @keyframes animloaderBackground {
         0% {
-            opacity: 1;
+          filter: blur(40px);
           }
+        25% {
+          filter: blur(30px);        
+        }
+        50% {
+          filter: blur(20px);        
+        }
+        75% {
+          filter: blur(10px);        
+        }
         100% {
-            opacity: 0.2;
-            z-index: -999;
-          }
+          filter: blur(0px);
+          z-index:-999;
       }
 }
 
 .bodyMenu header {
     margin-bottom: 0;
+}
 }

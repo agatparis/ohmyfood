@@ -117,6 +117,16 @@
                         transform: scale(1);
                         opacity:1;
                     }
+                    @include ecranDesktop {
+                        &:hover ~ label .favorite_border {
+                            opacity: 0;
+                        }
+                        &:hover ~ label .favorite {
+                            transition: all 600ms;
+                            transform: scale(1);
+                            opacity:1;
+                        }                        
+                    }
                 }  
             } 
         }
