@@ -589,16 +589,20 @@ a {
   }
 }
 .cardMenu__dishes__dishCard .dishesName {
+  display: flex;
+  flex-direction: column;
   padding: 1rem;
   text-align: left;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.cardMenu__dishes__dishCard .dishesName h3 {
+.cardMenu__dishes__dishCard .dishesName span:first-child {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  font-weight: 500;
+  font-size: 1.2rem;
 }
 .cardMenu__dishes__dishCard .dishesPrice {
   flex-basis: 3rem;
@@ -1009,6 +1013,17 @@ header .header__spacer {
   flex-basis: 20%;
   flex-shrink: 1;
 }
+header .material-icons {
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 1.3rem 0.7rem;
+}
+@media only screen and (max-width: 640px) {
+  header .material-icons {
+    padding: 1.5rem 0.7rem;
+  }
+}
 header .header__logo {
   flex-basis: 60%;
   flex-shrink: 0;
@@ -1033,11 +1048,6 @@ header .header__logo a {
   header .header__logo a {
     font-size: 30px;
   }
-}
-header .header__logo .material-icons {
-  position: absolute;
-  left: 0;
-  padding: 0.7rem;
 }
 
 .restaurants {
@@ -1181,6 +1191,7 @@ header .header__logo .material-icons {
 .restaurants__cardContent__legend__favorite .material-icons {
   position: absolute;
   font-size: 2rem;
+  top: -3.5rem;
 }
 .restaurants__cardContent__legend__favorite .favorite_border {
   right: 3%;

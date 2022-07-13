@@ -191,15 +191,19 @@
                 width: 19rem;
             }
             .dishesName {
+                display: flex;
+                flex-direction: column;
                 padding:1rem;
                 text-align: left;
                 white-space: nowrap;
                 overflow: hidden;
                 text-overflow: ellipsis;
-                h3 {
+                span:first-child {
                     white-space: nowrap;
                     overflow: hidden;
                     text-overflow: ellipsis;
+                    font-weight: 500;
+                    font-size: 1.2rem;
                 }
             }
             .dishesPrice {
