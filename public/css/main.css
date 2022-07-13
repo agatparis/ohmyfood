@@ -613,12 +613,19 @@ a {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.cardMenu__dishes__dishCard .dishesName span:first-child, .cardMenu__dishes__dishCard .dishesName span:nth-child(2) {
+.cardMenu__dishes__dishCard .dishesName span:first-child {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   font-weight: 500;
   font-size: 1.2rem;
+}
+.cardMenu__dishes__dishCard .dishesName span:nth-child(2) {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: 400;
+  font-size: 1rem;
 }
 .cardMenu__dishes__dishCard .dishesPrice {
   flex-basis: 3rem;
