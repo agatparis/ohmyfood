@@ -1,6 +1,7 @@
 .enteteMenu {
     display:flex;
     flex-direction: column;
+    justify-content: space-around;
     height: 50vh;
     background: $imgLaPaletteDuGout;
     background-size: cover;
@@ -13,7 +14,6 @@
         height: 6vh;
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
         align-content: center;
         background-color: $darkGreyColor;
         padding: 1.3rem $sectionPadding;
@@ -26,4 +26,16 @@
             justify-content: center;
         }
     }   
+    .material-icons {
+        right:6% !important;
+        @include ecranTablet {
+            position: absolute;
+            right:3% !important;
+            top: -5rem !important;
+        }
+        @include ecranDesktop {
+            position:absolute;
+            right:2% !important;
+        }
+    }
 }

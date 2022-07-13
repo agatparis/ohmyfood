@@ -170,6 +170,7 @@ a {
 .enteteMenu {
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
   height: 50vh;
   background: url(../assets/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
   background-size: cover;
@@ -183,7 +184,6 @@ a {
   height: 6vh;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   align-content: center;
   background-color: #eaeaea;
   padding: 1.3rem 1.5rem;
@@ -215,6 +215,22 @@ a {
 @media only screen and (min-width: 1023px) {
   .enteteMenu__nomRestaurant {
     justify-content: center;
+  }
+}
+.enteteMenu .material-icons {
+  right: 6% !important;
+}
+@media only screen and (min-width: 640px) and (max-width: 1023px) {
+  .enteteMenu .material-icons {
+    position: absolute;
+    right: 3% !important;
+    top: -5rem !important;
+  }
+}
+@media only screen and (min-width: 1023px) {
+  .enteteMenu .material-icons {
+    position: absolute;
+    right: 2% !important;
   }
 }
 
