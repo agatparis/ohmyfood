@@ -166,9 +166,9 @@
                 }
             }
             &:checked + label .dishesName {
-                max-width: 13rem;
+                max-width: 14rem;
                 @include ecranDesktop {
-                    max-width: 10rem;
+                    max-width: 11rem;
                 }
                 @include ecranTablet {
                     max-width: 20rem;
@@ -198,7 +198,7 @@
                 white-space: nowrap;
                 overflow: hidden;
                 text-overflow: ellipsis;
-                span:first-child {
+                span:first-child, span:nth-child(2) {
                     white-space: nowrap;
                     overflow: hidden;
                     text-overflow: ellipsis;
@@ -218,7 +218,7 @@
                 margin-top: 2.5rem;
                 @include ecranSmartphone {
                     right:2rem;
-                    width:1.5rem;
+                    width:2.5rem;
                 }
                 @include ecranDesktop {
                     position: absolute;

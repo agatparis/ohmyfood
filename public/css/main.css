@@ -557,11 +557,11 @@ a {
   }
 }
 .cardMenu__dishes input[type=radio]:checked + label .dishesName {
-  max-width: 13rem;
+  max-width: 14rem;
 }
 @media only screen and (min-width: 1023px) {
   .cardMenu__dishes input[type=radio]:checked + label .dishesName {
-    max-width: 10rem;
+    max-width: 11rem;
   }
 }
 @media only screen and (min-width: 640px) and (max-width: 1023px) {
@@ -597,7 +597,7 @@ a {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.cardMenu__dishes__dishCard .dishesName span:first-child {
+.cardMenu__dishes__dishCard .dishesName span:first-child, .cardMenu__dishes__dishCard .dishesName span:nth-child(2) {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -618,7 +618,7 @@ a {
 @media only screen and (max-width: 640px) {
   .cardMenu__dishes__dishCard .dishesPrice {
     right: 2rem;
-    width: 1.5rem;
+    width: 2.5rem;
   }
 }
 @media only screen and (min-width: 1023px) {
@@ -1229,6 +1229,4 @@ header .header__logo a {
   }
 }
 
-/* mise en forme des composants */
-/* design dédié à certaines pages */
-/* changement d'apparrence globale du site *//*# sourceMappingURL=main.css.map */
+/* mise en forme des composants */ /* design dédié à certaines pages */ /* changement d'apparrence globale du site *//*# sourceMappingURL=main.css.map */
